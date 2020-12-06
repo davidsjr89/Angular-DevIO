@@ -1,3 +1,4 @@
+import { TodoComponent } from './demos/todo-list/todo.component';
 import { BarServices } from './demos/bar-di-zones/bar.services';
 import { BarComponent } from './demos/bar-di-zones/bar.component';
 import { NgModule, Provider } from '@angular/core';
@@ -28,7 +29,7 @@ const rootRouterConfig: Routes = [
             loadChildren: () => import('./admin/admin.module')
             .then(m => m.AdminModule),
             canLoad: [AuthGuard], canActivate: [AuthGuard]},
-
+    {path: 'todo', component: TodoComponent},
     { path: '**', component: NotFoundComponent }
 ];
 

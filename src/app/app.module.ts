@@ -1,3 +1,4 @@
+import { TodoModule } from './demos/todo-list/todo.module';
 import { BarModule } from './demos/bar-di-zones/bar.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -44,7 +45,8 @@ import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
     BarModule.forRoot({
       unidadeId: 1000,
       unidadeToken: 'eca2dsa1sc56d1a3168e321c5dc'
-    })
+    }),
+    TodoModule
   ],
   providers: [
     AuthGuard,
