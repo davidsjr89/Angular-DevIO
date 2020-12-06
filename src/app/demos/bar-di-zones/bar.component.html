@@ -1,0 +1,22 @@
+<div class="container main-container">
+    <h2>Bar</h2>
+    <div>
+        Unidade Manual: {{ config.unidadeId }} e o token: {{ config.unidadeToken }}
+    </div>
+    <div>
+        Bebidas 1: {{ barBebida1 }}
+    </div>
+    <div>
+        Bebidas 2: {{ barBebida2 }}
+    </div>
+    <div>
+        Dados da Unidade do Serviço: {{ dadosUnidade }}
+    </div>
+    <br><br><br><br><br><br>
+    <p>Progress: {{progress}}</p>
+
+    <p *ngIf="progress >= 100">Done progress {{label}} of Angular zone!</p>
+
+    <a href="javascript:void(0)" class="btn btn-success" (click)="processWithinAngularZone()">Processar Dentro</a>
+    <a href="javascript:void(0)" class="btn btn-danger" (click)="processOutsideOfAngularZone()">Processar Fora</a>
+</div>
